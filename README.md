@@ -6,27 +6,41 @@
 
 ## Table of Contents
 
-1. [Installation](#installation)
+1. [Overview](#overview)
+2. [Installation](#installation)
    - [Clone the Repository](#clone-the-repository)
-2. [Program Execution](#program-execution)
+3. [Program Execution](#program-execution)
    - [Run the Application](#run-the-application)
-3. [DockerHub](#dockerhub)
+4. [DockerHub](#dockerhub)
    - [DockerHub Repository](#dockerhub-repository)
-4. [Evidences](#evidences)
+5. [Evidences](#evidences)
+
+## Overview
+This Python project uses FastAPI to create a simple web server with two endpoints:
+
+    / that returns a welcome message.
+    /distribuida that displays a message about distributed programming.
+
+The objective is to demonstrate the basic setup of FastAPI and deployment using Docker.
 
 ## Installation
+## Install Dependencies
+
+Ensure you have pip installed and run the following command to install the required dependencies:
+```sh
+git clone https://github.com/lunakenya/Project2-Python.git
+```
 ### Clone the Repository
 
 ```sh
-git clone https://github.com/lunakenya/Project2-Python.git
+pip install -r requirements.txt
 ```
 
 ## Program Execution
 ### Run the Application
-
-Open a Web Browser: Launch your preferred web browser.
-
-
+```sh
+uvicorn main:app --reload
+```
 ## DockerHub
 ### DockerHub Repository
 
@@ -35,6 +49,9 @@ Open a Web Browser: Launch your preferred web browser.
 Docker Pull Command
 ```sh
 docker pull luna28kenya412/my-python-app
+```
+```sh
+docker run -d -p 8081:8081 --name proyecto-python luna28kenya412/my-python-app
 ```
 
 ## Evidences
